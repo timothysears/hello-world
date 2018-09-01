@@ -1,0 +1,42 @@
+var ggr = new GlideRecord('sys_user_grmember');
+      ggr.addQuery('user', current.user);
+	  ggr.query();
+      while(ggr.next()){
+	     var gname = ggr.group.getDisplayValue();
+	     if(gname == 'MSP'){
+		   var 
+		 
+		 
+		 sys_user_preference
+		 
+		 name,glide.css.theme.ui16
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+
+		 
+		 
+var ug = new GlideRecord('sys_user_grmember');
+ug.addQuery('user', gs.getUser());
+ug.query();
+while(ug.next()){
+  var gn = ug.group.getDisplayValue();
+  if(gn == "MSP") {
+    var ut = new GlideRecord('sys_ui_theme');
+    ut.addQuery('active','true');
+    ut.addEncodedQuery('sys_name!=Blimey');
+    ut.query();
+    while(ut.next()) {
+      ut.setValue('active','false');
+      ut.update();
+    }
+  }
+}
