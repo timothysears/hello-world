@@ -1,0 +1,12 @@
+var grp = new GlideRecord('sys_user_group');
+		grp.addQuery('name', assign_gr);
+		grp.query();
+		while(grp.next()){
+			var grpname = grp.sys_id;
+			
+			var grm = new GlideRecord('sys_user_grmember');
+			grm.addQuery ('user', usr);
+			grm.addQuery ('group', grpname);
+			grm.query();
+			
+			if (grm.next()) {
