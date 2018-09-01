@@ -1,0 +1,12 @@
+  var uth = new GlideRecord('sys_ui_theme');
+    uth.addQuery('active','false');
+    uth.addEncodedQuery('sys_name!=Blimey');
+    uth.query();
+    while(uth.next()) {
+      uth.setValue('active','true');
+      uth.update();
+    }
+  }
+	
+	
+	
