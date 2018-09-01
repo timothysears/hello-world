@@ -1,0 +1,8 @@
+var ut = new GlideRecord('sys_user_preference');
+ut.addQuery('name','glide.css.theme.ui16');
+ut.addQuery('system','false');
+ut.query();
+while(ut.next()) {
+  ut.setValue('value','8b02d434db142b44e4b0f81d0f961965');
+  ut.update();
+}
