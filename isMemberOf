@@ -1,0 +1,7 @@
+if(gs.getUser().isMemberOf(current.assignment_group)){
+
+
+answer=true;
+
+
+}
